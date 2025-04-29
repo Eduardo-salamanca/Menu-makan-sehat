@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  background-image: url('https://i.postimg.cc/WbyP40NK/IMG-20250429-WA0005.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  color: #2d572c;
+  text-shadow: 1px 1px 2px white;
+  font-weight: 300;
+}
+
+.dropdown-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+select {
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  appearance: none;
+  background-color: white;
+  color: #4caf50;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%234caf50" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: center;
+  background-size: 24px;
+}
+
+.menu-buttons,
+.sub-buttons {
+  margin-top: 30px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: white;
+  color: #4caf50;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 200px;
+}
+
+.btn:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.menu-content {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  display: none;
+  text-align: left;
+  color: #333;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  white-space: pre-wrap;
+}
