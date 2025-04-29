@@ -1,4 +1,5 @@
 body {
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -7,7 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
-  background-image: url('https://i.postimg.cc/WbyP40NK/IMG-20250429-WA0005.jpg');
+  background-image: url('../images/background.jpg'); /* This is the local image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
