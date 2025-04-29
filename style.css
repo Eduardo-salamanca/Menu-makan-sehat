@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
-  background-image: url('../images/background.jpg'); /* This is the local image */
+  background-image: url('../background.jpg'); /* This is the local image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
