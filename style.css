@@ -85,15 +85,16 @@ select {
 }
 
 .menu-content {
-  margin-top: 30px;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
-  display: none;
-  text-align: left;
-  color: #333;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-  white-space: pre-wrap;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  background-image: url('menu.jpg'); /* Make sure the image is in same folder as index.html */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
