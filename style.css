@@ -7,40 +7,17 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
-  background-image: url('background.jpg'); /* Make sure the image is in same folder as index.html */
+  background-image: url('https://i.postimg.cc/WbyP40NK/IMG-20250429-WA0005.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
-
 .overlay {
   position: fixed;
   inset: 0;
   background-color: transparent; /* No white at all */
   z-index: -1;
-}
-.credits {
-  margin-top: 20px;
-  padding: 15px 25px;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  text-align: center;
-  font-weight: bold;
-  color: orange;
-  font-size: 16px;
-  max-width: 300px;
-}
-
-.credits ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.credits li {
-  margin: 3px 0;
 }
 header {
   padding: 20px;
@@ -78,12 +55,13 @@ select {
   background-size: 24px;
 }
 
-.menu-buttons, .sub-buttons {
-  margin-top: 10px;   /* Reduced from 30px */
+.menu-buttons,
+.sub-buttons {
+  margin-top: 30px;
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 8px;           /* Reduced from 20px */
+  gap: 20px;
 }
 
 .btn {
@@ -103,6 +81,7 @@ select {
   background-color: #4caf50;
   color: white;
 }
+
 .menu-content {
   padding: 0;
   height: 100vh;
