@@ -23,6 +23,55 @@ Kalori: 150 kcal<br>Karbohidrat: 18 g<br>Protein: 12 g<br>Lemak: 2 g<br><br>
 <b>Cara Membuat:</b><br>
 - Campurkan yogurt Greek dengan madu alami.<br>
 - Sajikan dingin.`
-  },
-  // You can add "Day 2", "Day 3" the same way later
+  }
 };
+
+const selector = document.getElementById("daySelector");
+const dropdownContainer = document.querySelector(".dropdown-container");
+const menuButtons = document.getElementById("mainButtons");
+const subButtons = document.getElementById("subMenu");
+const menuContent = document.getElementById("menuContent");
+
+selector.addEventListener("change", () => {
+  const day = selector.value;
+  if (!menusOtak[day]) {
+    alert("Menu belum tersedia.");
+    return;
+  }
+
+  dropdownContainer.innerHTML = `<h2>${day}</h2>`;
+  menuButtons.innerHTML = '';
+
+  const btnOtak = document.createElement("button");
+  btnOtak.className = "btn";
+  btnOtak.innerText = "Menu Otak";
+  btnOtak.onclick = () => showMenus(day, "otak");
+  menuButtons.appendChild(btnOtak);
+
+  const btnOtot = document.createElement("button");
+  btnOtot.className = "btn";
+  btnOtot.innerText = "Menu Otot (Coming Soon)";
+  menuButtons.appendChild(btnOtot);
+
+  menuButtons.style.display = "flex";
+});
+
+function showMenus(day, type) {
+  menuButtons.innerHTML = `<h2>Menu ${type === 'otak' ? 'Otak' : 'Otot'}</h2>`;
+  subButtons.innerHTML = '';
+  menuContent.innerHTML = '';
+  subButtons.style.display = "flex";
+
+  const menus = menusOtak[day];
+  Object.keys(menus).forEach(menuTitle => {
+    const btn = document.createElement("button");
+    btn.className = "btn";
+    btn.textContent = menuTitle;
+    btn.onclick = () => {
+      subButtons.innerHTML = `<h2>${menuTitle}</h2>`;
+      menuContent.innerHTML = menus[menuTitle];
+      menuContent.style.display = "block";
+    };
+    subButtons.appendChild(btn);
+  });
+      }
